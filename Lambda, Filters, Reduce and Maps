@@ -1,0 +1,9 @@
+l=range(0,10)
+n=map(lambda n:n*2,l)
+print(n)
+
+s=reduce(lambda a,b:a+b,l)
+print(s)
+
+j=filter(lambda n:n%2==0,l)
+print(j)
