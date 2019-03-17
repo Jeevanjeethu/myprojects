@@ -1,0 +1,20 @@
+#Program to Allocate 4 players into 2 Teams 
+from random import choice
+x=['John','Jack','Adam','Chil']
+# y=['Ram','Laxman','Seeta','Ravan']
+TeamA=[]
+TeamB=[]
+while len(x)>0:
+    PlayerA=choice(x)
+    print(PlayerA)
+    TeamA.append(PlayerA)
+    x.remove(PlayerA)
+    print('Players left',x)
+
+    PlayerB=choice(x)
+    print(PlayerB)
+    TeamB.append(PlayerB)
+    x.remove(PlayerB)
+    print('players left',x)
+print(TeamA)
+print(TeamB)
