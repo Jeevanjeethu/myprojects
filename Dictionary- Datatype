@@ -1,0 +1,8 @@
+a={'a':'apple','b':'ball','c':'cat'}
+print(a['a'])
+
+a['b']='bat'
+print(a)
+
+for k,v in a.items():
+	print(k,v)
