@@ -1,0 +1,24 @@
+#Calculater using functions
+#Various functions are defined for various airthmatic operations
+
+def add(x,y):
+    return x+y
+def sub(x,y):
+    return x-y
+def div(x,y):
+    return x/y
+def mul(x,y):
+    return x*y
+z=int(input("Enter tha activity to be performed add(1), Sub(2), Mul(3) and Div(4)"))
+x=int(input('Enter first no: '))
+y=int(input('Enter second no: '))
+if z==1:
+    print(add(x,y))
+elif z==2:
+    print(sub(x,y))
+elif z==3:
+    print(mul(x,y))
+elif z==4:
+    print(div(x,y))
+else:
+    print('Try again')
