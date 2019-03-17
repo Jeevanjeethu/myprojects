@@ -1,0 +1,40 @@
+#Guess Game - Using functions and Modules
+#Program generates unknown code and user needs to identify the code by clues provided based on input
+#Uses 3 different Modules
+#first Module
+import random
+def get_guess():
+	return list(input('enter ua guess'))
+
+def generate_code():
+	digits=(str(num) for num in range(10))
+	random.shuffle(digits)
+	return digits[:3]
+
+#Second Module
+def generate_class(code,usergenerate):
+	if code==userguess:
+		return 'CODE IS CRACKED'
+	clues=[]
+	for ind,num in enumerate(userguess):
+		if num==code[ind]:
+			clues.append('MATCH')
+		elif num in code:
+			clues.append('CLOSE')
+	if clues==[]:
+		return ['NOPE']
+	else:
+		return clues
+
+#Third Module
+import guessgame
+import gameguess
+print('Welcome to the game')
+screctcode=guessgame.generate_code()
+cluesreport=[]
+while cluesreport != 'CODE IS CRACKED':
+	guess=guessgame.get_guess()
+	cluesreport=gameguess.generate_clues(guess,screctcode)
+	print('Here is your clues for the game')
+	for clue in cluesreport():
+		print(clue)
